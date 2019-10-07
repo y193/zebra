@@ -110,7 +110,8 @@ SCRZEBRA_EXE	= scrzebra
 
 # --- Libraries
 
-LDFLAGS		= -static -lm -lz
+LDFLAGS		= -lm -lz
+#LDFLAGS	= -static -lm -lz
 #LDFLAGS	= -static -lm -lz -Wl,-Map,map.out
 
 
@@ -123,7 +124,8 @@ CXX		= g++
 
 # --- Flags ---
 
-DEFS =		-DINCLUDE_BOOKTOOL -DTEXT_BASED -DUSE_PENTIUM_ASM -DZLIB_STATIC
+DEFS =		-DINCLUDE_BOOKTOOL -DTEXT_BASED -DZLIB_STATIC -D_ANSI_SOURCE -D__linux__
+#DEFS =		-DINCLUDE_BOOKTOOL -DTEXT_BASED -DUSE_PENTIUM_ASM -DZLIB_STATIC
 #DEFS =		-DUSE_PENTIUM_ASM -DZLIB_STATIC 
 
 WARNINGS =	-Wall -Wcast-align -Wwrite-strings -Wstrict-prototypes -Winline
